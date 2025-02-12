@@ -24,6 +24,12 @@
         *{
             margin:0;
             border:0;
+            box-sizing: border-box;
+        }
+
+        html{
+            font-size:20px;
+            scroll-behavior: smooth;
         }
 
         h1,h2,h3{
@@ -33,15 +39,15 @@
         }
 
         h1{
-            font-size:50px;
+            /* font-size:50px; */
         }
 
         h3{
-            font-size:25px;
+            /* font-size:25px; */
         }
 
         h2{
-            font-size:35px;
+            /* font-size:35px; */
         }
 
         .heads{
@@ -49,18 +55,20 @@
         }
 
         .navigation{
-            border:5px solid rgb(168, 255, 168);
+            border:5px solid lightgrey;
+            background-color: lightgrey;
             padding:20px 0px;
             /* position:fixed; */
             z-index:1;
         }
 
         .ul{
-            background-color:white;
-            min-width:400px;
+            /* min-width:400px; */
             margin:5px auto;
-            width:30%;
-            border:2px solid lightsalmon;
+            width:50%;
+            /* border:2px solid red; */
+            text-align: center;
+            /* background-color: lightgrey; */
             /* overflow:hidden; */
         }
 
@@ -77,6 +85,7 @@
             text-decoration:none;
             text-transform:uppercase;
             color:lightcoral;
+            font-size:1rem;
         }
 
         .main-image{
@@ -95,19 +104,22 @@
         .bt-content{
             /* height:25%; */
             color:coral;
-            background-color: rgba(0,0,0,0.8);
+            background-color: rgba(0, 0, 0, 0.772);
             border-radius:5px;
-            padding:30px 30px;
-            width:20%;
+            padding:1.5rem 1.5rem;
+            width:25%;
             position:absolute;
-            bottom:90px;
-            right:200px;
+            bottom:10%;
+            right:20%;
+        }
+        .bt-content h1{
+            font-size:3rem;
         }
 
         /* main */
 
         .bg{
-           background-color:rgb(209, 174, 224);
+           background-color:lightgray;
             /* border:20px solid lightgreen; */
             /* height:400px; */
         }
@@ -123,7 +135,7 @@
         }
 
         .para1{
-            background-color:rgb(177, 225, 255);
+            background-color:rgb(192, 192, 192);
             overflow:hidden;
             padding:30px;
             border-bottom:3px groove black;
@@ -137,8 +149,13 @@
             width:45%;
         }
 
+        .para1-content h2{
+            font-size: 2.5rem;
+        }
+
         .para1-content p{
             margin:30px 0;
+            font-size:1rem;
         }
 
         .para1-image{
@@ -181,13 +198,16 @@
         }
 
         .btn{
+            display:block;
             margin-top:5px;
             display:inline-block;
-            background-color:lavender;
+            background-color:rgb(255, 222, 228);
             padding:10px 5px;
             text-decoration:none;
             color:black;
             border-radius:20px;
+            font-size:0.8rem;
+            margin-bottom:5px;
         }
 
         .btn:hover{
@@ -195,10 +215,33 @@
         }
 
 
+       @media screen and (max-width: 950px) {       
+
+        html{
+            font-size:18px;
+        }
+    } 
+
+    @media screen and (max-width: 865px){
+
+html{
+font-size:14px;
+}
+
+
+    }
+
+
+
+
         @media screen and (max-width: 800px){
 
+            html{
+            font-size:14px;
+        }
+
             .para1{
-            background-color:rgb(177, 225, 255);
+            background-color:rgb(192, 192, 192);
             /* overflow:hidden; */
             padding:30px;
             border-bottom:3px groove black;
@@ -230,21 +273,87 @@
         }
 
 
+        @media screen and (max-width: 775px){
+
+html{
+font-size:12px;
+}
+
+        }
+
+.ul{
+            /* min-width:400px; */
+            margin:5px auto;
+            width:80%;
+            /* border:2px solid red; */
+            text-align: center;
+            /* background-color: lightgrey; */
+            /* overflow:hidden; */
+        }
+
+
+        @media screen and (max-width: 400px){
+
+html{
+font-size:10px;
+} 
+
+.ul{
+            /* min-width:400px; */
+            margin:5px auto;
+            width:100%;
+            /* border:2px solid red; */
+            text-align: center;
+            /* background-color: lightgrey; */
+            /* overflow:hidden; */
+        }
+
+
+
+    
+
+    }
+
+
+        /* input[type=submit]{
+            width:100%;
+            background-color:lightcoral;
+            padding:12px 20px;
+            border-radius:4px;
+            border:none;
+            cursor:pointer;
+            font-size:15px;
+        }
+
+        input[type=email]select,textarea{
+            width:100%;
+            padding: 12px;
+            border:1px solid black;
+            border-radius:4px;
+            box-sizing:border-box;
+            margin-top:6px;
+            margin-bottom:16px;
+        } */
+
+
     </style>
 </head>
 <body>
 <!-- header -->
+
+
+
     <header class="heads">
         <nav class="navigation">
             <ul class="ul">
                 <li>
-                   <a href="">home</a> 
+                   <a href="index.html">home</a> 
                 </li>
                 <li>
-                   <a href="">music</a>
+                   <a href="#Music">music</a>
                 </li>
                 <li>
-                    <a href="">contact</a>
+                    <a href="contact.html">contact</a>
                 </li>
             </ul>
         </nav>
@@ -257,7 +366,9 @@
             </div>
 
         </div>
+
     </header>
+
 
 
 
@@ -266,20 +377,20 @@
     <!-- main -->
     <main class="bg">
         <div class="sw">
-            <section class="para1">
+            <section class="para1" id="Music">
                 <div class="para1-image">
                     <img src="image/trombone2.jpeg" class="trombone">
                 </div>
                 <div class="para1-content">
                     <h2>Trombone</h2>
                     <p>The trombone is a 15th-century development of the trumpet and, until approximately 1700, was known as the sackbut. Like a trumpet, it has a cylindrical bore flared to a bell. Its mouthpiece is larger, however, suited to its deeper musical register, and is parabolic in cross section, like a cornet</p>
-                    <a href="https://www.sfsymphony.org/EducationCommunity/Instrument-of-the-Months/Instrument-of-the-Month-Trombone  " target="_blank" class="btn">Find out more</a>
+                    <a href="https://www.yamaha.com/en/musical_instrument_guide/trombone/structure/" target="_blank" class="btn">Find out more</a>
                 </div>
             </section>
 
             <section class="para1">
                 <div class="para1-image">
-                    <img src="image/piano2.jpg" class="piano">
+                    <img src="image/piano2.png" class="piano">
                 </div>
                 <div class="para1-content">
                     <h2>piano</h2>
@@ -288,7 +399,6 @@
                 </div>
             </section>
         </div>
-
             
     </main>
 <!-- footer -->
